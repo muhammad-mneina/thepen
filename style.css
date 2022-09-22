@@ -1,0 +1,50 @@
+section {
+  height: 100vh; /* set to 100vh (viewport height) meaning it will be releative to the height of our browser window */
+  width: 100vw; /* set to 100vw (viewport width) meaning it will be releative to the width of our browser window */
+  background-size: cover; /* covers full width and height of section without skewing or repeating image */
+  background-attachment: fixed; /* this fixes the background to the viewport, thus making a parllax effect */
+  background-position: center;
+}
+
+.image_1 {
+  background-color: white;
+  background-image: url(image_1.svg);
+}
+
+.image_2 {
+  background-color: black;
+  background-image: url(image_2.svg);
+}
+
+.image_3 {
+  background-color: white;
+  background-image: url(image_3.svg);
+}
+.image_4 {
+  background-color: black;
+  background-image: url(image_4.svg);
+}
+.image_5 {
+  background-color: #00f10a;
+  background-image: url(image_5.svg);
+}
+
+a {
+  text-decoration: none; /* removes default underline */
+}
+
+footer {
+  position: fixed; /*this allows us to position the header in relation to the browser viewport - in this case  puts the header on top of the section */
+  width: 100%; /* makes width of footer 100% of page */
+  bottom: 30px; /* 30px from bottom of page */
+  display: flex; /* utilizing a flexible layout since this button is not on a grid */
+  justify-content: center; /* centers the button with help of flex */
+}
+
+/* responsive */
+@media (max-width: 800px) {
+  section {
+    background-attachment: scroll; /* removes paralax effect otherwise breaks on mobile */
+    height: 60vw; /* height set to 60% of the viewport height, ensuring background images are not cut off and we see the full image on mobile */
+  }
+}
